@@ -8,7 +8,6 @@
       <change afterPath="$PROJECT_DIR$/src/Simulator/Enemy.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/Simulator/EnemyRoomHandler.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/Simulator/Example.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Simulator/GraphHandler.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/Simulator/JsonHandler.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/Simulator/Ligacoes.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/Simulator/Map.java" afterDir="false" />
@@ -205,7 +204,7 @@
       <workItem from="1611839627815" duration="4791000" />
       <workItem from="1611928744531" duration="24679000" />
       <workItem from="1612017158236" duration="22000" />
-      <workItem from="1612017247645" duration="10938000" />
+      <workItem from="1612017247645" duration="2269000" />
     </task>
     <servers />
   </component>
@@ -215,68 +214,27 @@
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
-        <line-breakpoint enabled="true" type="java-method">
-          <url>file://$PROJECT_DIR$/src/Graph/DiGraph.java</url>
-          <line>251</line>
-          <properties class="src.Graph.DiGraph" method="BreadthFirstSearch">
-            <option name="EMULATED" value="true" />
-          </properties>
-          <option name="timeStamp" value="47" />
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/Simulator/Map.java</url>
+          <line>28</line>
+          <option name="timeStamp" value="11" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-method">
-          <url>file://$PROJECT_DIR$/src/Graph/DiGraph.java</url>
-          <line>106</line>
-          <properties class="src.Graph.DiGraph" method="findEdge">
-            <option name="EMULATED" value="true" />
-          </properties>
-          <option name="timeStamp" value="55" />
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/Graph/DiGraphTest.java</url>
+          <line>139</line>
+          <option name="timeStamp" value="12" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/Simulator/SimulatorTest.java</url>
-          <line>51</line>
-          <option name="timeStamp" value="45" />
+          <line>157</line>
+          <option name="timeStamp" value="15" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/Simulator/SimulatorTest.java</url>
-          <line>52</line>
-          <option name="timeStamp" value="46" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/Graph/DiGraph.java</url>
-          <line>253</line>
-          <option name="timeStamp" value="48" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/Graph/DiGraph.java</url>
-          <line>280</line>
-          <option name="timeStamp" value="49" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/Graph/DiGraph.java</url>
-          <line>281</line>
-          <option name="timeStamp" value="50" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/Simulator/RunSimulator.java</url>
-          <line>100</line>
-          <option name="timeStamp" value="52" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/Simulator/RunSimulator.java</url>
-          <line>102</line>
-          <option name="timeStamp" value="53" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/Simulator/RunSimulator.java</url>
-          <line>101</line>
-          <option name="timeStamp" value="54" />
+          <line>155</line>
+          <option name="timeStamp" value="38" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
-    <watches-manager>
-      <configuration name="Application">
-        <watch expression="root" />
-      </configuration>
-    </watches-manager>
   </component>
 </project>
