@@ -1,6 +1,6 @@
 package src.Simulator;
 
-import src.Graph.DiGraph;
+import src.Graph.DGraph;
 import src.Listl.LinkedList;
 
 import java.util.Iterator;
@@ -12,7 +12,7 @@ public class GraphHandler {
     public GraphHandler() {
     }
 
-    public DiGraph fillgraph(DiGraph graph, LinkedList<Ligacoes> ligacoesLinkedList){
+    public DGraph fillgraph(DGraph graph, LinkedList<Ligacoes> ligacoesLinkedList){
         Iterator linkItr = ligacoesLinkedList.iterator();
         while (linkItr.hasNext()) {
             Ligacoes tmp = (src.Simulator.Ligacoes) linkItr.next();

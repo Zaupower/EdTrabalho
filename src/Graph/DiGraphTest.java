@@ -24,7 +24,7 @@ public class DiGraphTest
 		//m.addPath("s3");
 
 		// create graph
-		DiGraph graph = new DiGraph();
+		DGraph graph = new DGraph();
 
 		// add a bunch of edges
 		graph.add("s0", "s1", 3);
@@ -58,12 +58,12 @@ public class DiGraphTest
 
 		//System.out.println("Graph is connected: ");
 		System.out.println("DFS Iterator");
-		Iterator<Vertex> itrDFS = graph.DepthFirstSearch("s2");
+		Iterator<Vertex> itrDFS = graph.iteratorDFS("s2");
 		while (itrDFS.hasNext()){
 			System.out.println("NO MAIN DFS: "+itrDFS.next().toString());
 		}
 		System.out.println("BFS Iterator");
-		Iterator<Vertex> itrBFS = graph.DepthFirstSearch("s2");
+		Iterator<Vertex> itrBFS = graph.iteratorBFS("s2");
 		while (itrBFS.hasNext()){
 			System.out.println("NO MAIN BFS: "+itrBFS.next().toString());
 		}
@@ -71,7 +71,7 @@ public class DiGraphTest
 		System.out.println();
 
 		System.out.println("s1 to s6");
-		Iterator<Vertex> itrDrk = graph.getPath("s2", "s6");
+		Iterator<Vertex> itrDrk = graph.iteratorShortestPath("s2", "s6");
 		while (itrDrk.hasNext()){
 			Vertex v = itrDrk.next();
 			System.out.println("NO MAIN Drijskta: "+v.getValue().toString() +", Distance: "+ v.getMinDistance());
@@ -81,7 +81,7 @@ public class DiGraphTest
 	}
 
 
-	public static void manualItr(String start, DiGraph graph, boolean finished, Map m) throws IOException {
+	public static void manualItr(String start, DGraph graph, boolean finished, Map m) throws IOException {
 		if (finished){
 			return;
 		}

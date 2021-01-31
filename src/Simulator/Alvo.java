@@ -1,16 +1,13 @@
 package src.Simulator;
 
-import com.google.gson.annotations.Expose;
-import com.google.gson.annotations.SerializedName;
+
 
 public class Alvo {
 
 
-    @SerializedName("divisao")
-    @Expose
+
     private String divisao;
-    @SerializedName("tipo")
-    @Expose
+
     private String tipo;
 
     public String getDivisao() {

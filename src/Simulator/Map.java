@@ -29,12 +29,22 @@ public class Map {
         return cod;
     }
 
-    public void getEntradasSaidas() {
+    public void printEntradasSaidas() {
         Iterator inOutitr = inOutRooms.iterator();
         while (inOutitr.hasNext()){
             Room tmp = (Room) inOutitr.next();
             System.out.println(tmp.getName());
         }
+    }
+
+    public Iterator getEntradasSaidas() {
+        Iterator inOutitr = inOutRooms.iterator();
+
+        return inOutitr;
+    }
+
+    public LinkedList<Room> getInOutRooms(){
+        return this.inOutRooms;
     }
 
     public String getFinish(){

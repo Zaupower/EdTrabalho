@@ -1,9 +1,7 @@
-package src.Graph;/* Generic Directed Weighted Graph with Dijkstra's Shortest Path Algorithm
-* by /u/Philboyd_Studge
-* for /r/javaexamples
-*/
+package src.Graph;
 
-
+import src.Exceptionsl.ElementNotFoundException;
+import src.Exceptionsl.NonComparableElementException;
 import src.Listl.ArrayUnorderedList;
 import src.Listl.LinkedList;
 import src.Queue.LinkedQueue;
@@ -11,23 +9,7 @@ import src.Queue.PriorityQueue;
 
 import java.util.Iterator;
 
-@SuppressWarnings("unchecked")
-/**
- * Creates a directed, weighted <tt>Graph</tt> for any Comparable type
- * <p> add src.Edge date with <code>add(T valueforVertexFrom, T valueForVertexTo, int cost)</code>
- * <p> use <code>getPath(T valueFrom, T valueTo)</code> to get the shortest path between
- * the two using Dijkstra's Algorithm
- * <p> If returned List has a size of 1 and a cost of Integer.Max_Value then no conected path
- * was found
- *
- * @author /u/Marcelo_Carvalho
- */
-
-
-public class
-
-
-DiGraph<T extends Comparable<T>>
+public class DGraph<T extends Comparable<T>> implements  GraphADT<T>
 {
 	private LinkedList<Vertex> vertices;
 	private LinkedList<Edge> edges;
@@ -36,7 +18,7 @@ DiGraph<T extends Comparable<T>>
 	/**
 	 * Default Constructor
 	 */
-	public DiGraph()
+	public DGraph()
 	{
 		this.vertices = new LinkedList<>();
 		this.edges = new LinkedList<>();
@@ -145,6 +127,44 @@ DiGraph<T extends Comparable<T>>
 		}
 	}
 
+	@Override
+	public void addVertex(T vertex) {
+	}
+
+	@Override
+	public void removeVertex(T vertex) {
+
+		try {
+			vertices.remove(vertex);
+		}catch (ElementNotFoundException e){
+			System.out.println(e);
+		}
+	}
+
+	@Override
+	public void addEdge(T vertex1, T vertex2) throws NonComparableElementException {
+
+	}
+
+	@Override
+	public void removeEdge(T vertex1, T vertex2) {
+
+		Vertex v1 = findVertex(vertex1);
+		Vertex v2 = findVertex(vertex2);
+
+		Edge tmp = findEdge(v1, v2);
+		try {
+			edges.remove(tmp);
+		}catch (ElementNotFoundException e){
+			System.out.println(e);
+		}
+	}
+
+	@Override
+	public boolean isEmpty() {
+		return vertices.isEmpty();
+	}
+
 	/**
 	 * Test if DFS or BFS returned a connected graph
 	 * @return true if connected, false if not.
@@ -157,6 +177,11 @@ DiGraph<T extends Comparable<T>>
 				return false;
 		}
 		return true;
+	}
+
+	@Override
+	public int size() {
+		return 0;
 	}
 
 	/**
@@ -178,12 +203,13 @@ DiGraph<T extends Comparable<T>>
 		return isConnected();
 	}
 
-	public Iterator DepthFirstSearch(T v){
+	@Override
+	public Iterator iteratorDFS(T v){
 		clearStates();
 		Vertex<T> root = findVertex(v);
-		 DepthFirstSearch(root);
+		DepthFirstSearch(root);
 
-		 return dfsResultList.iterator();
+		return dfsResultList.iterator();
 	}
 
 
@@ -249,7 +275,8 @@ DiGraph<T extends Comparable<T>>
 	 * @param v1 Value of type T for starting vertex
 	 * @return true if connected, false if not or if empty
 	 */
-	public Iterator BreadthFirstSearch(T v1)
+	@Override
+	public Iterator iteratorBFS(T v1)
 	{
 		ArrayUnorderedList<T> bfsResultList = new ArrayUnorderedList<T>();
 
@@ -365,7 +392,7 @@ DiGraph<T extends Comparable<T>>
 			return pathNull.iterator() ;
 		}
 
-		// loop through the vertices from end target 
+		// loop through the vertices from end target
 		for (Vertex<T> v = target; v !=null; v = v.previous)
 		{
 			path.addToFront((T) v);
@@ -396,7 +423,8 @@ DiGraph<T extends Comparable<T>>
 	 * @param to value of type T for vertex 'to'
 	 * @return ArrayList of type String of the steps in the shortest path.
 	 */
-	public Iterator<T> getPath(T from, T to)
+	@Override
+	public Iterator<T> iteratorShortestPath(T from, T to)
 	{
 		boolean test = Dijkstra(from);
 		if (test==false) return null;

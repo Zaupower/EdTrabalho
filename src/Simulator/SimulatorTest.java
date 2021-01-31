@@ -4,7 +4,7 @@ import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
 import org.json.simple.parser.ParseException;
-import src.Graph.DiGraph;
+import src.Graph.DGraph;
 import src.Graph.Vertex;
 import src.Listl.ArrayUnorderedList;
 import sun.awt.image.ImageWatched;
@@ -30,10 +30,9 @@ public class SimulatorTest {
         String finish = jsHandler.getAlvo();
         int version = jsHandler.getVersion();
 
-        DiGraph grapht = new DiGraph();
-       GraphHandler graphHandler = new GraphHandler();
-       DiGraph graph = graphHandler.fillgraph(grapht, ligacoesLinkedList);
-
+        DGraph grapht = new DGraph();
+        GraphHandler graphHandler = new GraphHandler();
+        DGraph graph = graphHandler.fillgraph(grapht, ligacoesLinkedList);
 
         Map map = new Map(cod, version, roomList,ligacoesLinkedList, inOutList, finish );
 
@@ -45,12 +44,8 @@ public class SimulatorTest {
             System.out.println("Room name: " + tmp.getName() + "Room damage: " + tmp.getDano());
         }
 
-        //Instanciar grafo
-
-
-
         System.out.println("BFS itr");
-        Iterator<Vertex> grahItr = graph.BreadthFirstSearch("Garagem");
+        Iterator<Vertex> grahItr = graph.iteratorBFS("Garagem");
         while (grahItr.hasNext()){
 
             System.out.println(grahItr.next());
@@ -58,19 +53,19 @@ public class SimulatorTest {
 
         String b = "Garagem";
         System.out.println("DFS itr");
-        Iterator dfsItr = graph.DepthFirstSearch(b);
+        Iterator dfsItr = graph.iteratorDFS(b);
         while (dfsItr.hasNext()){
             System.out.println(dfsItr.next());
         }
 
-        System.out.println("");
-        System.out.println("Drj itr");
-        Iterator drtItr = graph.getPath("Escada de Emergência", "Laboratório" );
-        while (drtItr.hasNext()){
-            Vertex v = (Vertex) drtItr.next();
+        //System.out.println("");
+        //System.out.println("Drj itr");
+        //Iterator drtItr = graph.getPath("Escada de Emergência", "Laboratório" );
+        //while (drtItr.hasNext()){
+          //  Vertex v = (Vertex) drtItr.next();
 
-            System.out.println("Drijskta: "+v.getValue() +", Distance: "+ v.getMinDistance()/2);
-        }
+            //System.out.println("Drijskta: "+v.getValue() +", Distance: "+ v.getMinDistance()/2);
+        //}
 
         System.out.println("Adj vertices");
         Iterator adjVertices = graph.getadjacentVertexs( "Laboratório" );

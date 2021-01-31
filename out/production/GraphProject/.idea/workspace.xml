@@ -2,78 +2,23 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="dc70bcee-ffe2-46dd-971c-0c624b952891" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Graph/DiGraphTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Graph/State.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Simulator/Alvo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Simulator/Enemy.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Simulator/EnemyRoomHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Simulator/Example.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Simulator/JsonHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Simulator/Ligacoes.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Simulator/Map.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Simulator/MapReader.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Simulator/Room.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Simulator/RunSimulator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Simulator/SimulatorTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/map.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/BfsTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/BfsTestTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DiGraph.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Graph/DiGraph.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DiGraphTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Edge.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Graph/Edge.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Exceptionsl/ElementNotFoundException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Exceptionsl/ElementNotFoundException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Exceptionsl/EmptyCollectionException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Exceptionsl/EmptyCollectionException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Exceptionsl/NonComparableElementException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Exceptionsl/NonComparableElementException.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/GraphProject.iml" beforeDir="false" afterPath="$PROJECT_DIR$/GraphProject.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Heap/Heap.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Heap/Heap.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Heap/HeapADT.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Heap/HeapADT.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Listl/ArrayIterator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Listl/ArrayIterator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Listl/ArrayList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Listl/ArrayList.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Listl/ArrayUnorderedList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Listl/ArrayUnorderedList.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Listl/LinkedList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Listl/LinkedList.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Listl/ListADT.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Listl/ListADT.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Node/BinaryTreeNode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Node/BinaryTreeNode.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Node/HeapNode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Node/HeapNode.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Node/LinearNode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Node/LinearNode.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Node/PriorityQueueNode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Node/PriorityQueueNode.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Person.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Queue/LinkedQueue.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Queue/LinkedQueue.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Queue/PriorityQueue.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Queue/PriorityQueue.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Queue/QueueADTl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Queue/QueueADT.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/State.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tree/BinaryTreeADT.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Tree/BinaryTreeADT.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tree/LinkedBinaryTree.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Tree/LinkedBinaryTree.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Vertex.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Graph/Vertex.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/GraphProject/.idea/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/GraphProject/.idea/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/GraphProject/DiGraph.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/GraphProject/DiGraphTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/GraphProject/Edge.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/GraphProject/Exceptionsl/ElementNotFoundException.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/GraphProject/Exceptionsl/EmptyCollectionException.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/GraphProject/Exceptionsl/NonComparableElementException.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/GraphProject/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/GraphProject/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/GraphProject/GraphProject.iml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/GraphProject/GraphProject.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/GraphProject/Heap/Heap.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/GraphProject/Heap/HeapADT.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/GraphProject/JetBrains.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/GraphProject/Listl/ArrayIterator.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/GraphProject/Listl/ArrayList.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/GraphProject/Listl/ArrayUnorderedList.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/GraphProject/Listl/LinkedList$LinkedListIterator.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/GraphProject/Listl/LinkedList.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/GraphProject/Listl/ListADT.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/GraphProject/Node/BinaryTreeNode.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/GraphProject/Node/HeapNode.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/GraphProject/Node/LinearNode.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/GraphProject/Node/PriorityQueueNode.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/GraphProject/Person.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/GraphProject/Queue/LinkedQueue.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/GraphProject/Queue/PriorityQueue.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/GraphProject/Queue/QueueADTl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/GraphProject/State.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/GraphProject/Tree/BinaryTreeADT.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/GraphProject/Tree/LinkedBinaryTree.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/GraphProject/Vertex.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/GraphProject/src/Simulator/Alvo.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/GraphProject/src/Simulator/Alvo.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/GraphProject/src/Simulator/JsonHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/GraphProject/src/Simulator/JsonHandler.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/GraphProject/src/Simulator/Map.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/GraphProject/src/Simulator/Map.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/GraphProject/src/Simulator/RunSimulator.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/GraphProject/src/Simulator/RunSimulator.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/GraphProject/src/Simulator/SimulatorTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/GraphProject/src/Simulator/SimulatorTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/GraphProject/tests/BfsTestTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/GraphProject/tests/BfsTestTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Graph/DiGraph.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Graph/DiGraph.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Simulator/Alvo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Simulator/Alvo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Simulator/JsonHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Simulator/JsonHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Simulator/Map.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Simulator/Map.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Simulator/RunSimulator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Simulator/RunSimulator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Simulator/SimulatorTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Simulator/SimulatorTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/BfsTestTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/tests/BfsTestTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -112,7 +57,7 @@
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit5" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5" value="src.DiGraph" />
     <property name="create.test.in.the.same.root" value="true" />
-    <property name="last_opened_file_path" value="$USER_HOME$/Downloads/json-parse-1.3.4.jar" />
+    <property name="last_opened_file_path" value="$USER_HOME$/OneDrive/Ambiente de Trabalho/Jars/json-simple-1.1.jar" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -139,7 +84,18 @@
       <recent name="Node" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.SimulatorTest">
+  <component name="RunManager" selected="JUnit.LigacoesTest.testGetFrom">
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="DiGraphTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="src.Graph.DiGraphTest" />
       <module name="GraphProject" />
@@ -160,17 +116,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="DiGraphTest.add" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="GraphProject" />
       <option name="PACKAGE_NAME" value="src.Graph" />
@@ -181,8 +126,25 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="LigacoesTest.testGetFrom" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="GraphProject" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="tests" />
+      <option name="MAIN_CLASS_NAME" value="tests.LigacoesTest" />
+      <option name="METHOD_NAME" value="testGetFrom" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.LigacoesTest.testGetFrom" />
         <item itemvalue="Application.SimulatorTest" />
         <item itemvalue="Application.DiGraphTest" />
         <item itemvalue="JUnit.DiGraphTest.add" />
@@ -204,7 +166,7 @@
       <workItem from="1611839627815" duration="4791000" />
       <workItem from="1611928744531" duration="24679000" />
       <workItem from="1612017158236" duration="22000" />
-      <workItem from="1612017247645" duration="2269000" />
+      <workItem from="1612017247645" duration="10938000" />
     </task>
     <servers />
   </component>
@@ -212,29 +174,10 @@
     <option name="version" value="3" />
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/Simulator/Map.java</url>
-          <line>28</line>
-          <option name="timeStamp" value="11" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/Graph/DiGraphTest.java</url>
-          <line>139</line>
-          <option name="timeStamp" value="12" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/Simulator/SimulatorTest.java</url>
-          <line>157</line>
-          <option name="timeStamp" value="15" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/Simulator/SimulatorTest.java</url>
-          <line>155</line>
-          <option name="timeStamp" value="38" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <watches-manager>
+      <configuration name="Application">
+        <watch expression="root" />
+      </configuration>
+    </watches-manager>
   </component>
 </project>

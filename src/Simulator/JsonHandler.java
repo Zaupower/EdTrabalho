@@ -76,18 +76,17 @@ public class JsonHandler {
 
         //Read all Room Edges
         this.Ligacoes = (JSONArray) jsonObject.get("ligacoes");
-        System.out.println(Ligacoes.get(0));
+        //System.out.println(Ligacoes.get(0));
 
         EntradasSaidas = (JSONArray) jsonObject.get("entradas-saidas");
         //System.out.println(EntradasSaidas.get(0));
+
         Alvo = (JSONObject) jsonObject.get("alvo");
         //System.out.println(Alvo.get("divisao") +" "+ Alvo.get("tipo"));
 
         //Read All Mission Enemys
         this.Inimigos = (JSONArray) jsonObject.get("inimigos");
-
         mapLoaded = true;
-
     }
 
     public LinkedList<Room> getEntradasSaida(){
@@ -105,6 +104,7 @@ public class JsonHandler {
         String alvo = (String) Alvo.get("divisao");
         return alvo;
     }
+
     public LinkedList<Room> getRooms(){
         LinkedList<Room> roomList = new LinkedList<>();
 
@@ -153,7 +153,8 @@ public class JsonHandler {
             Ligacoes ligacoes = new Ligacoes(from, to);
 
             for (int j = 0; j < enemyArray.size(); j++) {
-                if (enemyArray.getByIndex(j).getDivisao().equals(to.getName()) || enemyArray.getByIndex(j).getDivisao().equals(from.getName())) {
+                if (enemyArray.getByIndex(j).getDivisao().equals(to.getName()) ||
+                        enemyArray.getByIndex(j).getDivisao().equals(from.getName())) {
                     ligacoes.setDano(enemyArray.getByIndex(j).getPoder());
                 }
             }
