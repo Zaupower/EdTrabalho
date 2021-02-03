@@ -1,24 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="dc70bcee-ffe2-46dd-971c-0c624b952891" name="Default Changelist" comment="">
+    <list default="true" id="dc70bcee-ffe2-46dd-971c-0c624b952891" name="Default Changelist" comment="&quot;Pisco added&quot;">
+      <change afterPath="$PROJECT_DIR$/simulation.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GraphProject.iml" beforeDir="false" afterPath="$PROJECT_DIR$/GraphProject.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/GraphProject/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/GraphProject/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/GraphProject/GraphProject.iml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/GraphProject/GraphProject.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/GraphProject/src/Simulator/Alvo.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/GraphProject/src/Simulator/Alvo.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/GraphProject/src/Simulator/JsonHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/GraphProject/src/Simulator/JsonHandler.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/GraphProject/src/Simulator/Map.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/GraphProject/src/Simulator/Map.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/GraphProject/src/Simulator/RunSimulator.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/GraphProject/src/Simulator/RunSimulator.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/GraphProject/src/Simulator/SimulatorTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/GraphProject/src/Simulator/SimulatorTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/GraphProject/tests/BfsTestTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/GraphProject/tests/BfsTestTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Graph/DiGraph.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Graph/DiGraph.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Simulator/Alvo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Simulator/Alvo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Simulator/JsonHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Simulator/JsonHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Simulator/Map.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Simulator/Map.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/GraphProject/tests/BfsTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/GraphProject/tests/BfsTestTest.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Simulator/RunSimulator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Simulator/RunSimulator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Simulator/SimulatorTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Simulator/SimulatorTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/BfsTestTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/tests/BfsTestTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -28,8 +18,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="JUnit5 Test Class" />
         <option value="Class" />
+        <option value="Interface" />
+        <option value="JUnit5 Test Class" />
       </list>
     </option>
   </component>
@@ -45,6 +36,7 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="Downloaded.Files.Path.Enabled" value="false" />
     <property name="Repository.Attach.Annotations" value="false" />
     <property name="Repository.Attach.JavaDocs" value="false" />
@@ -55,7 +47,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit5" />
-    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5" value="src.DiGraph" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5" value="src.Graph.DGraph" />
     <property name="create.test.in.the.same.root" value="true" />
     <property name="last_opened_file_path" value="$USER_HOME$/OneDrive/Ambiente de Trabalho/Jars/json-simple-1.1.jar" />
     <property name="node.js.detected.package.eslint" value="true" />
@@ -73,6 +65,8 @@
       <recent name="C:\Users\marce\OneDrive\Ambiente de Trabalho\ED\9ff6fffe423b220c8890-e48dca33cb4ee815b6fd6d54f85ec337c7997e33" />
     </key>
     <key name="CreateTestDialog.Recents.Supers">
+      <recent name="src.Graph.DGraph" />
+      <recent name="src.Simulator.Ligacoes" />
       <recent name="src.DiGraph" />
       <recent name="" />
     </key>
@@ -84,7 +78,7 @@
       <recent name="Node" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.LigacoesTest.testGetFrom">
+  <component name="RunManager" selected="Application.SimulatorTest">
     <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
@@ -92,13 +86,6 @@
         </value>
       </option>
       <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="DiGraphTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="src.Graph.DiGraphTest" />
-      <module name="GraphProject" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -112,16 +99,6 @@
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="DiGraphTest.add" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="GraphProject" />
-      <option name="PACKAGE_NAME" value="src.Graph" />
-      <option name="MAIN_CLASS_NAME" value="src.Graph.DiGraphTest" />
-      <option name="METHOD_NAME" value="add" />
-      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -142,12 +119,61 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="LigacoesTest.testGetTo" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="GraphProject" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="tests" />
+      <option name="MAIN_CLASS_NAME" value="tests.LigacoesTest" />
+      <option name="METHOD_NAME" value="testGetTo" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="LigacoesTest.testSetFrom" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="GraphProject" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="tests" />
+      <option name="MAIN_CLASS_NAME" value="tests.LigacoesTest" />
+      <option name="METHOD_NAME" value="testSetFrom" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="LigacoesTest.testSetTo" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="GraphProject" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="tests" />
+      <option name="MAIN_CLASS_NAME" value="tests.LigacoesTest" />
+      <option name="METHOD_NAME" value="testSetTo" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.LigacoesTest.testGetFrom" />
         <item itemvalue="Application.SimulatorTest" />
-        <item itemvalue="Application.DiGraphTest" />
-        <item itemvalue="JUnit.DiGraphTest.add" />
+        <item itemvalue="JUnit.LigacoesTest.testSetTo" />
+        <item itemvalue="JUnit.LigacoesTest.testGetTo" />
+        <item itemvalue="JUnit.LigacoesTest.testSetFrom" />
+        <item itemvalue="JUnit.LigacoesTest.testGetFrom" />
       </list>
     </recent_temporary>
   </component>
@@ -168,10 +194,35 @@
       <workItem from="1612017158236" duration="22000" />
       <workItem from="1612017247645" duration="10938000" />
     </task>
+    <task id="LOCAL-00001" summary="&quot;Pisco added&quot;">
+      <created>1612118349828</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1612118349828</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="&quot;Pisco added&quot;" />
+    <option name="LAST_COMMIT_MESSAGE" value="&quot;Pisco added&quot;" />
   </component>
   <component name="XDebuggerManager">
     <watches-manager>
