@@ -37,41 +37,5 @@ public class SimulatorTest {
         Map map = new Map(cod, version, roomList,ligacoesLinkedList, inOutList, finish );
 
         RunSimulator run = new RunSimulator(graph, map);
-
-        Iterator roomItr2 = roomList.iterator();
-        while (roomItr2.hasNext()) {
-            Room tmp = (Room) roomItr2.next();
-            System.out.println("Room name: " + tmp.getName() + "Room damage: " + tmp.getDano());
-        }
-
-        System.out.println("BFS itr");
-        Iterator<Vertex> grahItr = graph.iteratorBFS("Garagem");
-        while (grahItr.hasNext()){
-
-            System.out.println(grahItr.next());
-        }
-
-        String b = "Garagem";
-        System.out.println("DFS itr");
-        Iterator dfsItr = graph.iteratorDFS(b);
-        while (dfsItr.hasNext()){
-            System.out.println(dfsItr.next());
-        }
-
-        //System.out.println("");
-        //System.out.println("Drj itr");
-        //Iterator drtItr = graph.getPath("Escada de Emergência", "Laboratório" );
-        //while (drtItr.hasNext()){
-          //  Vertex v = (Vertex) drtItr.next();
-
-            //System.out.println("Drijskta: "+v.getValue() +", Distance: "+ v.getMinDistance()/2);
-        //}
-
-        System.out.println("Adj vertices");
-        Iterator adjVertices = graph.getadjacentVertexs( "Laboratório" );
-        while (adjVertices.hasNext()){
-            Vertex v = (Vertex) adjVertices.next();
-            System.out.println("Adj vertices: "+v.getValue());
-        }
     }
 }

@@ -1,14 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="dc70bcee-ffe2-46dd-971c-0c624b952891" name="Default Changelist" comment="&quot;Pisco added&quot;">
-      <change afterPath="$PROJECT_DIR$/simulation.json" afterDir="false" />
+    <list default="true" id="dc70bcee-ffe2-46dd-971c-0c624b952891" name="Default Changelist" comment="&quot;Pisco added2&quot;">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/GraphProject/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/GraphProject/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/GraphProject/src/Graph/DiGraphTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/GraphProject/src/Graph/DiGraphTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/GraphProject/src/Simulator/EnemyRoomHandler.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/GraphProject/src/Simulator/RunSimulator.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/GraphProject/src/Simulator/RunSimulator.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/GraphProject/tests/BfsTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/GraphProject/tests/BfsTestTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/GraphProject/src/Simulator/SimulatorTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/GraphProject/src/Simulator/SimulatorTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Graph/DiGraphTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Graph/DiGraphTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Simulator/EnemyRoomHandler.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Simulator/RunSimulator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Simulator/RunSimulator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Simulator/SimulatorTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Simulator/SimulatorTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/DGraphTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/tests/DGraphTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -103,7 +107,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="LigacoesTest.testGetFrom" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="DGraphTest.testAdd" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="GraphProject" />
       <extension name="coverage">
         <pattern>
@@ -112,8 +116,24 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="tests" />
-      <option name="MAIN_CLASS_NAME" value="tests.LigacoesTest" />
-      <option name="METHOD_NAME" value="testGetFrom" />
+      <option name="MAIN_CLASS_NAME" value="tests.DGraphTest" />
+      <option name="METHOD_NAME" value="testAdd" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="DGraphTest.testAddEdge" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="GraphProject" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="tests" />
+      <option name="MAIN_CLASS_NAME" value="tests.DGraphTest" />
+      <option name="METHOD_NAME" value="testAddEdge" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -130,22 +150,6 @@
       <option name="PACKAGE_NAME" value="tests" />
       <option name="MAIN_CLASS_NAME" value="tests.LigacoesTest" />
       <option name="METHOD_NAME" value="testGetTo" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="LigacoesTest.testSetFrom" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="GraphProject" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="tests.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="tests" />
-      <option name="MAIN_CLASS_NAME" value="tests.LigacoesTest" />
-      <option name="METHOD_NAME" value="testSetFrom" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -170,10 +174,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="Application.SimulatorTest" />
+        <item itemvalue="JUnit.DGraphTest.testAddEdge" />
+        <item itemvalue="JUnit.DGraphTest.testAdd" />
         <item itemvalue="JUnit.LigacoesTest.testSetTo" />
         <item itemvalue="JUnit.LigacoesTest.testGetTo" />
-        <item itemvalue="JUnit.LigacoesTest.testSetFrom" />
-        <item itemvalue="JUnit.LigacoesTest.testGetFrom" />
       </list>
     </recent_temporary>
   </component>
@@ -201,7 +205,14 @@
       <option name="project" value="LOCAL" />
       <updated>1612118349828</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="&quot;Pisco added2&quot;">
+      <created>1612375459488</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1612375459488</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -222,7 +233,8 @@
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="&quot;Pisco added&quot;" />
-    <option name="LAST_COMMIT_MESSAGE" value="&quot;Pisco added&quot;" />
+    <MESSAGE value="&quot;Pisco added2&quot;" />
+    <option name="LAST_COMMIT_MESSAGE" value="&quot;Pisco added2&quot;" />
   </component>
   <component name="XDebuggerManager">
     <watches-manager>

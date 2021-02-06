@@ -106,6 +106,7 @@ public class RunSimulator {
 
                     case 3:
                         automaticEdge();
+                        break;
                     case 4:
                         Iterator i = jsons.iterator();
                         while (i.hasNext()) {

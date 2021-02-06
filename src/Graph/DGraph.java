@@ -98,23 +98,6 @@ public class DGraph<T extends Comparable<T>> implements  GraphADT<T>
 		return null;
 	}
 
-	/**
-	 * Find edge from two values
-	 * @param from from value of type T
-	 * @param to to value of type T
-	 * @return src.Edge, or <code>null</code> if not found.
-	 */
-	private Edge findEdge(T from, T to)
-	{
-		for (Edge each : edges)
-		{
-			if (each.from.value.equals(from) && each.to.value.equals(to))
-			{
-				return each;
-			}
-		}
-		return null;
-	}
 
 	/**
 	 * Sets all states to UNVISITED
@@ -133,7 +116,6 @@ public class DGraph<T extends Comparable<T>> implements  GraphADT<T>
 
 	@Override
 	public void removeVertex(T vertex) {
-
 		try {
 			vertices.remove(vertex);
 		}catch (ElementNotFoundException e){
