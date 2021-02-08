@@ -12,15 +12,13 @@ public class LinkedList<T> implements Iterable<T>, ListADT {
     private int counter = 0;
     private LinearNode<T> head, tail;
 
-    /**
-     *
-     */
     public LinkedList() {
         this.head = null;
         this.tail = null;
     }
 
     /**
+     * Add element in list
      * @param data
      * @return
      */
@@ -39,6 +37,7 @@ public class LinkedList<T> implements Iterable<T>, ListADT {
     }
 
     /**
+     * Remove of list on element
      * @param data
      */
 
@@ -106,6 +105,10 @@ public class LinkedList<T> implements Iterable<T>, ListADT {
         }
     }
 
+    /**
+     * Remove the first element of list
+     * @return (T) oldHead
+     */
     @Override
     public T removeFirst() {
         if (isEmpty()) {
@@ -117,6 +120,11 @@ public class LinkedList<T> implements Iterable<T>, ListADT {
         return (T) oldHead;
     }
 
+    /**
+     * Remove the lasy element of list
+     * @return (T) oldTail
+     * @throws EmptyCollectionException
+     */
     @Override
     public T removeLast() throws EmptyCollectionException {
         if (isEmpty()) {
@@ -134,7 +142,11 @@ public class LinkedList<T> implements Iterable<T>, ListADT {
     }
 
 
-    //Replace found object with new one
+    /**
+     * Replace found object with new one
+     * @param target
+     * @return found
+     */
     public boolean replace(Object target){
         if (isEmpty())
             return false;
@@ -153,16 +165,29 @@ public class LinkedList<T> implements Iterable<T>, ListADT {
             }
         return found;
     }
+
+    /**
+     * Get first object of list
+     * @return head
+     */
     @Override
     public Object first() {
         return this.head;
     }
 
+    /**
+     * Get last object of list
+     * @return tail
+     */
     @Override
     public Object last() {
         return this.tail;
     }
 
+    /**
+     * Verify if list are empty
+     * @return true
+     */
     public boolean isEmpty() {
         if (head == null || tail == null) {
             return true;
@@ -170,11 +195,20 @@ public class LinkedList<T> implements Iterable<T>, ListADT {
         else return false;
     }
 
+    /**
+     * Return size of list
+     * @return size
+     */
     @Override
     public int size() {
         return 0;
     }
 
+    /**
+     * Verify if list constains an element
+     * @param target
+     * @retur found
+     */
     @Override
     public boolean contains(Object target)  {
         if (isEmpty())
@@ -197,6 +231,10 @@ public class LinkedList<T> implements Iterable<T>, ListADT {
         return new LinkedListIterator<T>();
     }
 
+    /**
+     * Iterator for list
+     * @param <T>
+     */
     protected class LinkedListIterator<T> implements Iterator<T>{
         LinearNode<T> current = null;
         @Override
@@ -222,26 +260,50 @@ public class LinkedList<T> implements Iterable<T>, ListADT {
         }
     }
 
+    /**
+     * get counter
+     * @return
+     */
     public int getCounter() {
         return counter;
     }
 
+    /**
+     * set counter
+     * @param counter
+     */
     public void setCounter(int counter) {
         this.counter = counter;
     }
 
+    /**
+     * Get head
+     * @return head
+     */
     public LinearNode<T> getHead() {
         return head;
     }
 
+    /**
+     * Set head
+     * @param head
+     */
     public void setHead(LinearNode<T> head) {
         this.head = head;
     }
 
+    /**
+     * get the tail
+     * @return tail
+     */
     public LinearNode<T> getTail() {
         return tail;
     }
 
+    /**
+     * Set tail
+     * @param tail
+     */
     public void setTail(LinearNode<T> tail) {
         this.tail = tail;
     }

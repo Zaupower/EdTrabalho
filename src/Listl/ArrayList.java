@@ -13,27 +13,25 @@ public class ArrayList<T> implements ListADT<T>
     protected int rear;
     protected T[] list;
 
-    //-----------------------------------------------------------------
-    //  Creates an empty list using the default capacity.
-    //-----------------------------------------------------------------
+
     public ArrayList()
     {
         rear = 0;
         list = (T[])(new Object[DEFAULT_CAPACITY]);
     }
 
-    //-----------------------------------------------------------------
-    //  Creates an empty list using the specified capacity.
-    //-----------------------------------------------------------------
+
     public ArrayList(int initialCapacity)
     {
         rear = 0;
         list = (T[])(new Object[initialCapacity]);
     }
 
-    //-----------------------------------------------------------------
-    //  Removes and returns the last element in the list.
-    //-----------------------------------------------------------------
+    /**
+     * Method for remove the last item on list
+     * @return result
+     * @throws EmptyCollectionException
+     */
     public T removeLast () throws EmptyCollectionException
     {
         T result;
@@ -48,9 +46,11 @@ public class ArrayList<T> implements ListADT<T>
         return result;
     }
 
-    //-----------------------------------------------------------------
-    //  Removes and returns the first element in the list.
-    //-----------------------------------------------------------------
+    /**
+     * Method for remove the first item on list
+     * @return result
+     * @throws EmptyCollectionException
+     */
     public T removeFirst() throws EmptyCollectionException
     {
         if (isEmpty())
@@ -68,9 +68,11 @@ public class ArrayList<T> implements ListADT<T>
         return result;
     }
 
-    //-----------------------------------------------------------------
-    //  Removes and returns the specified element.
-    //-----------------------------------------------------------------
+    /**
+     * Method for remove one item on list
+     * @param element
+     * @return result
+     */
     public T remove (T element)
     {
         T result;
@@ -92,11 +94,11 @@ public class ArrayList<T> implements ListADT<T>
     }
 
 
-    //-----------------------------------------------------------------
-    //  Returns a reference to the element at the front of the list.
-    //  The element is not removed from the list.  Throws an
-    //  EmptyCollectionException if the list is empty.
-    //-----------------------------------------------------------------
+    /**
+     * Returns a reference to the element at the front of the list.
+     * @return list[0]
+     * @throws EmptyCollectionException
+     */
     public T first() throws EmptyCollectionException
     {
         if (isEmpty())
@@ -105,11 +107,11 @@ public class ArrayList<T> implements ListADT<T>
         return list[0];
     }
 
-    //-----------------------------------------------------------------
-    //  Returns a reference to the element at the rear of the list.
-    //  The element is not removed from the list.  Throws an
-    //  EmptyCollectionException if the list is empty.
-    //-----------------------------------------------------------------
+    /**
+     * Returns a reference to the element at the rear of the list.
+     * @return list[rear-1]
+     * @throws EmptyCollectionException
+     */
     public T last() throws EmptyCollectionException
     {
         if (isEmpty())
@@ -118,18 +120,22 @@ public class ArrayList<T> implements ListADT<T>
         return list[rear-1];
     }
 
-    //-----------------------------------------------------------------
-    //  Returns true if this list contains the specified element.
-    //-----------------------------------------------------------------
+    /**
+     * Returns true if this list contains the specified element.
+     * @param target
+     * @return (find(target) != NOT_FOUND)
+     */
     public boolean contains (T target)
     {
         return (find(target) != NOT_FOUND);
     }
 
-    //-----------------------------------------------------------------
-    //  Returns the array index of the specified element, or the
-    //  constant NOT_FOUND if it is not found.
-    //-----------------------------------------------------------------
+    /**
+     * Returns the array index of the specified element, or the
+     * constant NOT_FOUND if it is not found.
+     * @param target
+     * @return result
+     */
     private int find (T target)
     {
         int scan = 0, result = NOT_FOUND;
@@ -148,6 +154,11 @@ public class ArrayList<T> implements ListADT<T>
         return result;
     }
 
+    /**
+     * Return of index of one item
+     * @param index
+     * @return result
+     */
     public T getByIndex(int index){
         T result = list[index];
         if (index>-1){
@@ -155,33 +166,38 @@ public class ArrayList<T> implements ListADT<T>
         }
        return null;
     }
-    //-----------------------------------------------------------------
-    //  Returns true if this list is empty and false otherwise.
-    //-----------------------------------------------------------------
+
+    /**
+     * Returns true if this list is empty and false otherwise.
+     * @return (rear==0)
+     */
     public boolean isEmpty()
     {
         return (rear == 0);
     }
 
-    //-----------------------------------------------------------------
-    //  Returns the number of elements currently in this list.
-    //-----------------------------------------------------------------
+    /**
+     * Returns the number of elements currently in this list.
+     * @return rear
+     */
     public int size()
     {
         return rear;
     }
 
-    //-----------------------------------------------------------------
-    //  Returns an iterator for the elements currently in this list.
-    //-----------------------------------------------------------------
+    /**
+     * Returns an iterator for the elements currently in this list.
+     * @return ArrayIterator<T> (list, rear)
+     */
     public Iterator<T> iterator()
     {
         return new ArrayIterator<T> (list, rear);
     }
 
-    //-----------------------------------------------------------------
-    //  Returns a string representation of this list.
-    //-----------------------------------------------------------------
+    /**
+     * Returns a string representation of this list.
+     * @return result
+     */
     public String toString()
     {
         String result = "";
@@ -192,10 +208,10 @@ public class ArrayList<T> implements ListADT<T>
         return result;
     }
 
-    //-----------------------------------------------------------------
-    //  Creates a new array to store the contents of the list with
-    //  twice the capacity of the old one.
-    //-----------------------------------------------------------------
+    /**
+     *  Creates a new array to store the contents of the list with
+     *  twice the capacity of the old one.
+     */
     protected void expandCapacity()
     {
         T[] larger = (T[])(new Object[list.length*2]);

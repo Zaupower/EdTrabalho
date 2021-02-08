@@ -64,10 +64,18 @@ public class Vertex<T> implements Comparable<Vertex<T>>
     }
 
 
+    /**
+     *  Method for get the name
+     * @return
+     */
     public Object getValue() {
         return this.value;
     }
 
+    /**
+     * Method for get min distance calculate from djistra
+     * @return
+     */
     public Double getMinDistance() {
         return this.minDistance;
     }

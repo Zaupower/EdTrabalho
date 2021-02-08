@@ -114,6 +114,10 @@ public class DGraph<T extends Comparable<T>> implements  GraphADT<T>
 	public void addVertex(T vertex) {
 	}
 
+	/**
+	 * Method for renove one vertex
+	 * @param vertex the vertex to be removed from this graph
+	 */
 	@Override
 	public void removeVertex(T vertex) {
 		try {
@@ -128,6 +132,11 @@ public class DGraph<T extends Comparable<T>> implements  GraphADT<T>
 
 	}
 
+	/**
+	 * Method for remove one edge between two Vertex
+	 * @param vertex1 the first vertex
+	 * @param vertex2 the second vertex
+	 */
 	@Override
 	public void removeEdge(T vertex1, T vertex2) {
 
@@ -142,6 +151,10 @@ public class DGraph<T extends Comparable<T>> implements  GraphADT<T>
 		}
 	}
 
+	/**
+	 * Method for verify if graph is empty
+	 * @return
+	 */
 	@Override
 	public boolean isEmpty() {
 		return vertices.isEmpty();
@@ -161,6 +174,10 @@ public class DGraph<T extends Comparable<T>> implements  GraphADT<T>
 		return true;
 	}
 
+	/**
+	 * Method for see the size of graph
+	 * @return
+	 */
 	@Override
 	public int size() {
 		return 0;
@@ -290,6 +307,11 @@ public class DGraph<T extends Comparable<T>> implements  GraphADT<T>
 		return bfsResultList.iterator();
 	}
 
+	/**
+	 * Method for get the adjacent Vertex's
+	 * @param v1
+	 * @return
+	 */
 	public Iterator getadjacentVertexs(T v1){
 		ArrayUnorderedList<T> pathList = new ArrayUnorderedList<T>();
 		if (vertices.isEmpty()) return null;

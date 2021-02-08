@@ -1,10 +1,14 @@
 package src.Exceptionsl;
 
+/**
+ * Class EmptyCollectionException
+ */
 public class EmptyCollectionException extends RuntimeException
 {
-    //-----------------------------------------------------------------
-    //  Sets up this exception with an appropriate message.
-    //-----------------------------------------------------------------
+    /**
+     * Exception for collection empty
+     * @param collection
+     */
     public EmptyCollectionException (String collection)
     {
         super ("The " + collection + " is empty.");
