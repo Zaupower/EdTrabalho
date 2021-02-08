@@ -12,7 +12,9 @@ import java.io.IOException;
 import java.nio.file.NoSuchFileException;
 import java.util.Iterator;
 
-
+/**
+ * Class to read json files
+ */
 public class JsonHandler {
 
     private String cod;
@@ -96,6 +98,10 @@ public class JsonHandler {
         }
     }
 
+    /**
+     * Get InOutRooms
+     * @return LinkedList<Room> entradasSaida
+     */
     public LinkedList<Room> getEntradasSaida(){
 
         Iterator inOutItr = EntradasSaidas.iterator();
@@ -107,11 +113,19 @@ public class JsonHandler {
        return  entradasSaida;
     }
 
+    /**
+     * Get target
+     * @return Room target
+     */
     public String getAlvo(){
         String alvo = (String) Alvo.get("divisao");
         return alvo;
     }
 
+    /**
+     * Get all rooms
+     * @return  LinkedList<Room> roomList
+     */
     public LinkedList<Room> getRooms(){
         LinkedList<Room> roomList = new LinkedList<>();
 
@@ -144,12 +158,16 @@ public class JsonHandler {
 
     /**
      * Returns the json mission version
-     * @return
+     * @return version
      */
     public int getVersion(){
         return this.version;
     }
 
+    /**
+     * Get all edges
+     * @return  LinkedList<Ligacoes> ligacoesLinkedList
+     */
     public LinkedList<Ligacoes> getLigacoes(){
         for (int i = 0; i < Ligacoes.size(); i++) {
             JSONArray objTmp = (JSONArray) Ligacoes.get(i);

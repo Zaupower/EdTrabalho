@@ -1,5 +1,8 @@
 package src.Simulator;
 
+/**
+ * Room class representation
+ */
 public class Room implements Comparable {
 
     String name;
@@ -16,6 +19,10 @@ public class Room implements Comparable {
         this.dano = dano;
     }
 
+    /**
+     * Get room name
+     * @return
+     */
     public String getName() {
         return name;
     }
@@ -23,13 +30,28 @@ public class Room implements Comparable {
     public int getDano(){
         return this.dano;
     }
+
+    /**
+     * Set room damage
+     * @param dano
+     */
     public void setDano(int dano){
         this.dano = this.dano + dano;
     }
+
+    /**
+     * Set room name
+     * @param name
+     */
     public void setName(String name) {
         this.name = name;
     }
 
+    /**
+     * Comparable method
+     * @param o
+     * @return int 0 equals, 1 higher, -1 lower
+     */
     @Override
     public int compareTo(Object o) {
         if (this.name.equals(o))

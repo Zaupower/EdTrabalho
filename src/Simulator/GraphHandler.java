@@ -8,10 +8,18 @@ import java.util.Iterator;
 
 public class GraphHandler {
 
-
+    /**
+     * Graph handler class
+     */
     public GraphHandler() {
     }
 
+    /**
+     * Fill graph with Map
+     * @param graph
+     * @param ligacoesLinkedList
+     * @return
+     */
     public DGraph fillgraph(DGraph graph, LinkedList<Ligacoes> ligacoesLinkedList){
         Iterator linkItr = ligacoesLinkedList.iterator();
         while (linkItr.hasNext()) {

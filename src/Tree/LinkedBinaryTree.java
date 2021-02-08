@@ -25,10 +25,6 @@ public class LinkedBinaryTree<T> implements BinaryTreeADT<T>
         root = null;
     }  // constructor LinkedBinaryTree
 
-    //================================================================
-    //  Creates a binary tree with the specified element as its root.
-    //================================================================
-
     /**
      * Creates a binary tree with the specified element as its root.
      * @param element
@@ -39,9 +35,6 @@ public class LinkedBinaryTree<T> implements BinaryTreeADT<T>
         root = new BinaryTreeNode<T> (element);
     }  // constructor LinkedBinaryTree
 
-    //================================================================
-    //  Constructs a binary tree from the two specified binary trees.
-    //================================================================
 
     /**
      * Constructs a binary tree from the two specified binary trees.
@@ -72,10 +65,6 @@ public class LinkedBinaryTree<T> implements BinaryTreeADT<T>
 
     }  // constructor LinkedBinaryTree
 
-    //================================================================
-    //  Removes the left subtree of this binary tree.
-    //================================================================
-
     /**
      * Removes the left subtree of this binary tree.
      */
@@ -86,9 +75,9 @@ public class LinkedBinaryTree<T> implements BinaryTreeADT<T>
         root.setLeft(null);
     }  // method removeLeftSubtree
 
-    //================================================================
-    //  Removes the right subtree of this binary tree.
-    //================================================================
+    /**
+     * Removes the right subtree of this binary tree.
+     */
     public void removeRightSubtree()
     {
         if (root.getRight() != null)
@@ -96,9 +85,10 @@ public class LinkedBinaryTree<T> implements BinaryTreeADT<T>
         root.setRight(null);
     }  // method removeRightSubtree
 
-    //================================================================
-    //  Deletes all nodes from the binary tree.
-    //================================================================
+
+    /**
+     * Deletes all nodes from the binary tree.
+     */
     public void removeAllElements()
     {
         count = 0;
@@ -110,26 +100,31 @@ public class LinkedBinaryTree<T> implements BinaryTreeADT<T>
         return (T) this.root;
     }
 
-    //================================================================
-    //  Returns true if the binary tree is empty and false otherwise.
-    //================================================================
+    /**
+     * Returns true if the binary tree is empty and false otherwise.
+     * @return count
+     */
     public boolean isEmpty()
     {
         return (count == 0);
     }  // method isEmpty
 
-    //================================================================
-    //  Returns true if the binary tree is empty and false otherwise.
-    //================================================================
+    /**
+     * Returns true if the binary tree is empty and false otherwise.
+     * @return count
+     */
     public int size()
     {
         return count;
     }  // method size
 
-    //================================================================
-    //  Returns true if the tree contains an element that matches the
-    //  specified target element and false otherwise.
-    //================================================================
+
+    /**
+     * Returns true if the tree contains an element that matches the
+     * specified target element and false otherwise.
+     * @param targetElement
+     * @return found
+     */
     public boolean contains (T targetElement)
     {
 
@@ -151,11 +146,14 @@ public class LinkedBinaryTree<T> implements BinaryTreeADT<T>
 
     }  // method contains
 
-    //================================================================
-    //  Returns a reference to the specified target element if it is
-    //  found in the binary tree.  Throws a NoSuchElementException if
-    //  the specified target element is not found in the binary tree.
-    //================================================================
+    /**
+     *    Returns a reference to the specified target element if it is
+     *    found in the binary tree.  Throws a NoSuchElementException if
+     *    the specified target element is not found in the binary tree.
+     * @param targetElement
+     * @return
+     * @throws ElementNotFoundException
+     */
     public T find(T targetElement) throws ElementNotFoundException {
         BinaryTreeNode<T> current = findagain( targetElement, root );
         if( current == null )
@@ -163,10 +161,13 @@ public class LinkedBinaryTree<T> implements BinaryTreeADT<T>
         return (current.getElement());
     } // method find
 
-    //================================================================
-    //  Returns a reference to the specified target element if it is
-    //  found in the binary tree.
-    //================================================================
+    /**
+     *  Returns a reference to the specified target element if it is
+     *   found in the binary tree.
+     * @param targetElement
+     * @param next
+     * @return
+     */
     private BinaryTreeNode<T> findagain(T targetElement, BinaryTreeNode<T> next) {
         if (next == null) {
             return null;
@@ -185,6 +186,11 @@ public class LinkedBinaryTree<T> implements BinaryTreeADT<T>
     //================================================================
     //  Returns a string representation of the binary tree.
     //================================================================
+
+    /**
+     * Returns a string representation of the binary tree.
+     * @return templist.toString()
+     */
     public String toString()
     {
         ArrayUnorderedList<T> templist = new ArrayUnorderedList<T>();
@@ -192,11 +198,12 @@ public class LinkedBinaryTree<T> implements BinaryTreeADT<T>
         return templist.toString();
     }  // method toString
 
-    //================================================================
-    //  Performs an inorder traversal on the binary tree by calling an
-    //  overloaded, recursive inorder method that starts with
-    //  the root.
-    //================================================================
+    /**
+     *    Performs an inorder traversal on the binary tree by calling an
+     *    overloaded, recursive inorder method that starts with
+     *    the root.
+     * @return templist.iterator()
+     */
     public Iterator<T> iteratorInOrder()
     {
         ArrayUnorderedList<T> templist = new ArrayUnorderedList<T>();
@@ -204,9 +211,11 @@ public class LinkedBinaryTree<T> implements BinaryTreeADT<T>
         return templist.iterator();
     }  // method inorder
 
-    //================================================================
-    //  Performs a recursive inorder traversal.
-    //================================================================
+    /**
+     * Performs a recursive inorder traversal.
+     * @param node
+     * @param templist
+     */
     protected void inorder (BinaryTreeNode<T> node, ArrayUnorderedList<T> templist)
     {
 
@@ -215,25 +224,34 @@ public class LinkedBinaryTree<T> implements BinaryTreeADT<T>
             inorder (node.getLeft(), templist);
             templist.addToRear(node.getElement());
             inorder (node.getRight(), templist);
-        }//if
+        }
 
-    }  // method inorder
+    }
 
     //================================================================
     //  Performs an preorder traversal on the binary tree by calling an
     //  overloaded, recursive preorder method that starts with
     //  the root.
     //================================================================
+
+    /**
+     *  Performs an preorder traversal on the binary tree by calling an
+     *  overloaded, recursive preorder method that starts with
+     *  the root.
+     * @return templist.iterator()
+     */
     public Iterator<T> iteratorPreOrder()
     {
         ArrayUnorderedList<T> templist = new ArrayUnorderedList<T>();
         preorder (root, templist);
         return templist.iterator();
-    }  // method preorder
+    }
 
-    //================================================================
-    //  Performs a recursive preorder traversal.
-    //================================================================
+    /**
+     * Performs a recursive preorder traversal.
+     * @param node
+     * @param templist
+     */
     protected void preorder (BinaryTreeNode<T> node, ArrayUnorderedList<T> templist)
     {
 
@@ -242,15 +260,18 @@ public class LinkedBinaryTree<T> implements BinaryTreeADT<T>
             templist.addToRear(node.getElement());
             preorder (node.getLeft(), templist);
             preorder (node.getRight(), templist);
-        }//if
+        }
 
-    }  // method preorder
+    }
 
-    //================================================================
-    //  Performs an postorder traversal on the binary tree by calling
-    //  an overloaded, recursive postorder method that starts
-    //  with the root.
-    //================================================================
+
+    /**
+     * Performs an postorder traversal on the binary tree by calling
+     * an overloaded, recursive postorder method that starts
+     * with the root.
+     * templist.iterator()
+     * @return
+     */
     public Iterator<T> iteratorPostOrder()
     {
         ArrayUnorderedList<T> templist = new ArrayUnorderedList<T>();
@@ -258,9 +279,12 @@ public class LinkedBinaryTree<T> implements BinaryTreeADT<T>
         return templist.iterator();
     }  // method postorder
 
-    //================================================================
-    //  Performs a recursive postorder traversal.
-    //================================================================
+
+    /**
+     * Performs a recursive postorder traversal.
+     * @param node
+     * @param templist
+     */
     protected void postorder (BinaryTreeNode<T> node, ArrayUnorderedList<T> templist)
     {
 
@@ -269,14 +293,15 @@ public class LinkedBinaryTree<T> implements BinaryTreeADT<T>
             postorder (node.getLeft(), templist);
             postorder (node.getRight(), templist);
             templist.addToRear(node.getElement());
-        }//if
+        }
 
-    }  // method postorder
+    }
 
-    //================================================================
-    //  Performs a levelorder traversal on the binary tree, using a
-    //  templist.
-    //================================================================
+    /**
+     *  Performs a levelorder traversal on the binary tree, using a
+     *  templist.
+     * @return templist.iterator()
+     */
     public Iterator<T> iteratorLevelOrder()
     {
 
@@ -295,10 +320,10 @@ public class LinkedBinaryTree<T> implements BinaryTreeADT<T>
                 templist.addToRear(current.getElement());
                 nodes.addToRear (current.getLeft());
                 nodes.addToRear (current.getRight());
-            }//if
+            }
             else
                 templist.addToRear(null);
-        }//while
+        }
         return templist.iterator();
-    }  // method levelorder
-}  // class BinaryTree
+    }
+}

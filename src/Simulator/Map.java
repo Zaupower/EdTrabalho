@@ -5,7 +5,9 @@ import sun.awt.image.ImageWatched;
 
 import java.util.Iterator;
 
-
+/**
+ * Map class representation
+ */
 public class Map {
     private final LinkedList<Ligacoes> ligacoes;
     private final int version;
@@ -15,7 +17,15 @@ public class Map {
     private int pathListCounter = 0;
     String finish;
 
-
+    /**
+     * Map constructor
+     * @param cod
+     * @param version
+     * @param rooms
+     * @param ligacoesLinkedList
+     * @param inOutRooms
+     * @param finish
+     */
     public Map(String cod, int version,LinkedList<Room> rooms, LinkedList<Ligacoes> ligacoesLinkedList,LinkedList<Room> inOutRooms, String finish ) {
         this.cod = cod;
         this.version = version;
@@ -25,6 +35,10 @@ public class Map {
         this.finish = finish;
     }
 
+    /**
+     * Get Mission code
+     * @return cod
+     */
     public String getCode() {
         return cod;
     }
@@ -37,16 +51,28 @@ public class Map {
         }
     }
 
+    /**
+     * Get Iterator of inOutRooms
+     * @return Iterator inOutitr
+     */
     public Iterator getEntradasSaidas() {
         Iterator inOutitr = inOutRooms.iterator();
 
         return inOutitr;
     }
 
+    /**
+     * Get inOutRooms List
+     * @return this.inOutRooms
+     */
     public LinkedList<Room> getInOutRooms(){
         return this.inOutRooms;
     }
 
+    /**
+     * Get finish room
+     * @return finish
+     */
     public String getFinish(){
 
         return  finish;

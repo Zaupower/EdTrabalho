@@ -11,12 +11,14 @@ import src.Listl.ArrayUnorderedList;
 import src.Listl.LinkedList;
 
 import java.io.*;
-import java.nio.file.NoSuchFileException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Iterator;
 
-
+/**
+ * Run simulator Menu
+ *
+ */
 public class RunSimulator {
 
 
@@ -49,6 +51,11 @@ public class RunSimulator {
         startSimulator();
     }
 
+    /**
+     * Simulator menu
+     * @throws IOException
+     * @throws ParseException
+     */
     public void startSimulator() throws IOException, ParseException {
             while (true) {
                 System.out.println(ANSI_RED + "Bem vindo ao simulador 3000 de ataque NCIS"+ ANSI_RESET);
@@ -182,6 +189,11 @@ public class RunSimulator {
 
     }
 
+    /**
+     * Chose Map to play
+     * @throws IOException
+     * @throws ParseException
+     */
     private void choseMap() throws IOException, ParseException {
 
         segundoMapa = true;
@@ -229,6 +241,12 @@ public class RunSimulator {
         }
     }
 
+    /**
+     * Read saved runs
+     * @param file
+     * @throws IOException
+     * @throws ParseException
+     */
     private void readRuns(String file) throws IOException, ParseException {
         JSONParser parser = new JSONParser();
         String location = "CompletedMissions/" + file;
@@ -247,6 +265,10 @@ public class RunSimulator {
             }
     }
 
+    /**
+     * Chose type of iteration or map to run automatic simulation
+     * @throws IOException
+     */
     public void automaticEdge() throws IOException {
         double minStart = Double.MAX_VALUE;
         String minStartVertex = null;
@@ -316,7 +338,11 @@ public class RunSimulator {
         }
     }
 
-
+    /**
+     * Run game on automatic input
+     * @param start
+     * @param finish
+     */
     public void automatic(String start, boolean finish) {
         Double damage = 0.00;
         System.out.println("Caminho a percorrer: ");
@@ -329,6 +355,12 @@ public class RunSimulator {
         System.out.println("Dano recebido até ao fim: " + damage);
     }
 
+    /**
+     * Run game on manual input
+     * @param start
+     * @param finished
+     * @throws IOException
+     */
     public void manualItr(String start, boolean finished) throws IOException {
 
         if (start.equals(map.finish)) {

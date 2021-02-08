@@ -2,28 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="dc70bcee-ffe2-46dd-971c-0c624b952891" name="Default Changelist" comment="&quot;Pisco added2&quot;">
-      <change afterPath="$PROJECT_DIR$/CompletedMissions/simulationpe de cabraDate_202102081703.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Maps/map.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Maps/map2.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/jars/json-parse-1.3.4.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/jars/json-simple-1.1.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GraphProject.iml" beforeDir="false" afterPath="$PROJECT_DIR$/GraphProject.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/GraphProject/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/GraphProject/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/GraphProject/GraphProject.iml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/GraphProject/GraphProject.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/GraphProject/simulation1.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/GraphProject/simulation2.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/GraphProject/src/Simulator/JsonHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/GraphProject/src/Simulator/JsonHandler.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/GraphProject/src/Simulator/RunSimulator.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/GraphProject/src/Simulator/RunSimulator.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/GraphProject/src/Simulator/SimulatorTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/GraphProject/src/Simulator/SimulatorTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/GraphProject/src/map.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/simulation1.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/simulation2.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/simulation3.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Simulator/Enemy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Simulator/Enemy.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Simulator/GraphHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Simulator/GraphHandler.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Simulator/JsonHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Simulator/JsonHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Simulator/Ligacoes.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Simulator/Ligacoes.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Simulator/Map.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Simulator/Map.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Simulator/Room.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Simulator/Room.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Simulator/RunSimulator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Simulator/RunSimulator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Simulator/SimulatorTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Simulator/SimulatorTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/map.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Tree/BinaryTreeADT.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Tree/BinaryTreeADT.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Tree/LinkedBinaryTree.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Tree/LinkedBinaryTree.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -209,7 +197,7 @@
       <workItem from="1612017158236" duration="22000" />
       <workItem from="1612017247645" duration="10938000" />
       <workItem from="1612793245533" duration="4416000" />
-      <workItem from="1612801278947" duration="3411000" />
+      <workItem from="1612801278947" duration="5329000" />
     </task>
     <task id="LOCAL-00001" summary="&quot;Pisco added&quot;">
       <created>1612118349828</created>
@@ -250,15 +238,6 @@
     <option name="LAST_COMMIT_MESSAGE" value="&quot;Pisco added2&quot;" />
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/Simulator/GraphHandler.java</url>
-          <line>16</line>
-          <option name="timeStamp" value="5" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
     <watches-manager>
       <configuration name="Application">
         <watch expression="root" />
