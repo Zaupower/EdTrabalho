@@ -8,27 +8,32 @@ import java.util.Iterator;
 public class PriorityQueue<T> extends Heap<PriorityQueueNode<T>>
 {
 
-    //================================================================
-    //  Creates an empty expression tree.
-    //================================================================
+
+    /**
+     *  Creates an empty expression tree.
+     */
     public PriorityQueue()
     {
         super();
-    }  // constructor PriorityQueue
+    }
 
-
-    //================================================================
-    //  adds the given element to the PriorityQueue
-    //================================================================
+    /**
+     * adds the given element to the PriorityQueue
+     * @param object
+     * @param priority
+     */
     public void addElement (T object, int priority)
     {
         PriorityQueueNode<T> node = new PriorityQueueNode<T> (object, priority);
         super.addElement(node);
 
-    }  // constructor PriorityQueue
+    }
 
-
-    //Removes an element return new priority queue without the element
+    /**
+     * Removes an element return new priority queue without the element
+     * @param toRemove
+     * @return PriorityQueue<T>
+     */
     public PriorityQueue<T> remove(T toRemove){
 
         PriorityQueue<T> prAfterRemoved = new PriorityQueue<>();
@@ -46,16 +51,18 @@ public class PriorityQueue<T> extends Heap<PriorityQueueNode<T>>
         }
         return prAfterRemoved;
     }
-    //================================================================
-    //  Removes the next highest priority element from the priority queue
-    //  and returns a reference to it.
-    //================================================================
+
+    /**
+     * Removes the next highest priority element from the priority queue
+     * and returns a reference to it.
+     * @return T
+     */
     public T removeNext()
     {
         PriorityQueueNode<T> temp = (PriorityQueueNode<T>)super.removeMin();
         return temp.getElement();
-    }  // method removeNext
+    }
 
 
 
-}  // class PriorityQueue
+}

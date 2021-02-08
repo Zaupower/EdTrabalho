@@ -267,7 +267,7 @@ public class RunSimulator {
 
     /**
      * Chose type of iteration or map to run automatic simulation
-     * @throws IOException
+     * @throws IOException exception
      */
     public void automaticEdge() throws IOException {
         double minStart = Double.MAX_VALUE;

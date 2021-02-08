@@ -14,14 +14,15 @@ public class HeapNode<T> extends BinaryTreeNode<T>
         this.parent = parent;
     }
 
-    //================================================================
-    //  Creates a new heap node with the specified data.
-    //================================================================
+    /**
+     * Creates a new heap node with the specified data.
+     * @param obj
+     */
     public HeapNode(T obj)
     {
         super(obj);
         parent = null;
-    }  // constructor HeapNode
+    }
 
 
-}  // class HeapNode
+}

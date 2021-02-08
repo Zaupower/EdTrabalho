@@ -9,18 +9,19 @@ public class LinkedQueue<T> implements QueueADT<T>
     private int count;
     private LinearNode<T> front, rear;
 
-    //-----------------------------------------------------------------
-    //  Creates an empty queue.
-    //-----------------------------------------------------------------
+    /**
+     * Creates an empty queue.
+     */
     public LinkedQueue()
     {
         count = 0;
         front = rear = null;
     }
 
-    //-----------------------------------------------------------------
-    //  Adds the specified element to the rear of the queue.
-    //-----------------------------------------------------------------
+    /**
+     * Adds the specified element to the rear of the queue.
+     * @param element element
+     */
     public void enqueue (T element)
     {
         LinearNode<T> node = new LinearNode<T>(element);
@@ -34,11 +35,13 @@ public class LinkedQueue<T> implements QueueADT<T>
         count++;
     }
 
-    //-----------------------------------------------------------------
-    //  Removes the element at the front of the queue and returns a
-    //  reference to it. Throws an EmptyCollectionException if the
-    //  queue is empty.
-    //-----------------------------------------------------------------
+    /**
+     * Removes the element at the front of the queue and returns a
+     *  reference to it. Throws an EmptyCollectionException if the
+     *  queue is empty.
+     * @return T
+     * @throws EmptyCollectionException
+     */
     public T dequeue() throws EmptyCollectionException
     {
         if (isEmpty())
@@ -54,11 +57,13 @@ public class LinkedQueue<T> implements QueueADT<T>
         return result;
     }
 
-    //-----------------------------------------------------------------
-    //  Returns a reference to the element at the front of the queue.
-    //  The element is not removed from the queue.  Throws an
-    //  EmptyCollectionException if the queue is empty.
-    //-----------------------------------------------------------------
+    /**
+     *   Returns a reference to the element at the front of the queue.
+     *   The element is not removed from the queue.  Throws an
+     *   EmptyCollectionException if the queue is empty.
+     * @return T
+     * @throws EmptyCollectionException
+     */
     public T first() throws EmptyCollectionException
     {
         if (isEmpty())
@@ -67,25 +72,28 @@ public class LinkedQueue<T> implements QueueADT<T>
         return front.getElement();
     }
 
-    //-----------------------------------------------------------------
-    //  Returns true if this queue is empty and false otherwise.
-    //-----------------------------------------------------------------
+    /**
+     * Returns true if this queue is empty and false otherwise.
+     * @return bool
+     */
     public boolean isEmpty()
     {
         return (count == 0);
     }
 
-    //-----------------------------------------------------------------
-    //  Returns the number of elements currently in this queue.
-    //-----------------------------------------------------------------
+    /**
+     * Returns the number of elements currently in this queue.
+     * @return size
+     */
     public int size()
     {
         return count;
     }
 
-    //-----------------------------------------------------------------
-    //  Returns a string representation of this queue.
-    //-----------------------------------------------------------------
+    /**
+     * Returns a string representation of this queue.
+     * @return String
+     */
     public String toString()
     {
         String result = "";

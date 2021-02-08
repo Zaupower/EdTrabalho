@@ -8,53 +8,60 @@ public class PriorityQueueNode<T> implements Comparable<PriorityQueueNode>
     private int order;
     private T element;
 
-    //================================================================
-    //  Creates a new PriorityQueueNode with the specified data.
-    //================================================================
+    /**
+     *  Creates a new PriorityQueueNode with the specified data.
+     * @param obj
+     * @param prio
+     */
     public PriorityQueueNode (T obj, int prio)
     {
         element = obj;
         priority = prio;
         order = nextorder;
         nextorder++;
-    }  // constructor PriorityQueueNode
+    }
 
 
-    //================================================================
-    // method getElement() returns the element
-    //================================================================
+
+    /**
+     * method getElement() returns the element
+     * @return T
+     */
     public T getElement()
     {
 
         return element;
 
-    }  // method getElement
+    }
 
-    //================================================================
-    // method getPriority() returns the priority
-    //================================================================
+    /**
+     *  method getPriority() returns the priority
+     * @return int priority
+     */
     public int getPriority()
     {
 
         return priority;
 
-    }  // method getPriority
+    }
 
-    //================================================================
-    // method getOrder() returns the order
-    //================================================================
+    /**
+     * method getOrder() returns the order
+     * @return order
+     */
     public int getOrder()
     {
 
         return order;
 
-    }  // method getOrder
+    }
 
-
-    //================================================================
-    // method compareTo() returns the 1 if the current node has higher
-    // priority than the given node, -1 otherwise
-    //================================================================
+    /**
+     *  method compareTo() returns the 1 if the current node has higher
+     *  priority than the given node, -1 otherwise
+     * @param obj
+     * @return
+     */
     public int compareTo(PriorityQueueNode obj)
     {
         int result;
@@ -69,7 +76,7 @@ public class PriorityQueueNode<T> implements Comparable<PriorityQueueNode>
             result = -1;
         return result;
 
-    }  // method compareTo
+    }
 
 
-}  // class PriorityQueueNode
+}

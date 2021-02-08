@@ -29,20 +29,22 @@ public class BinaryTreeNode<T> {
         this.right = right;
     }
 
-    //================================================================
-    //  Creates a new tree node with the specified data.
-    //================================================================
+    /**
+     * Creates a new tree node with the specified data.
+     * @param obj
+     */
     public BinaryTreeNode(T obj)
     {
         element = obj;
         left = null;
         right = null;
-    }  // constructor BinaryTreeNode
+    }
 
-    //================================================================
-    //  Returns the number of non-null children of this node.
-    //  This method may be able to be written more efficiently.
-    //================================================================
+    /**
+     *  Returns the number of non-null children of this node.
+     *  This method may be able to be written more efficiently
+     * @return children
+     */
     public int numChildren()
     {
 
@@ -56,6 +58,6 @@ public class BinaryTreeNode<T> {
 
         return children;
 
-    }  // method numChildren
+    }
 
-}  // class BinaryTreeNode
+}
