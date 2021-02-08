@@ -7,10 +7,10 @@ import src.Graph.Edge;
 import src.Graph.Vertex;
 import src.Listl.LinkedList;
 
-import java.io.BufferedReader;
-import java.io.FileWriter;
-import java.io.IOException;
-import java.io.InputStreamReader;
+import java.io.*;
+import java.text.SimpleDateFormat;
+import java.time.LocalTime;
+import java.util.Date;
 import java.util.Iterator;
 
 
@@ -108,16 +108,37 @@ public class RunSimulator {
                         automaticEdge();
                         break;
                     case 4:
-                        Iterator i = jsons.iterator();
-                        while (i.hasNext()) {
-                            JSONObject jsonObject = (JSONObject) i.next();
-                            String mission = (String) jsonObject.get("Mission");
-                            Double hp = (Double) jsonObject.get("Hp");
-                            System.out.println(mission + "Hp " + hp);
+
+
+                        //ler nome dos ficheiros da pasta CompletedMissions
+                        File folder = new File("CompletedMissions\\");
+                        File[] listOfFiles = folder.listFiles();
+
+                        for (int i = 0; i < listOfFiles.length; i++) {
+                            if (listOfFiles[i].isFile()) {
+                                System.out.println("File " + listOfFiles[i].getName());
+                            } else if (listOfFiles[i].isDirectory()) {
+                                System.out.println("Directory " + listOfFiles[i].getName());
+                            }
                         }
-                        Iterator it = pathArray.iterator();
-                        while (it.hasNext()) {
-                            System.out.println(it.next());
+                        boolean found =false;
+                        System.out.println("Por favor indique a simulação que deseja ver ");
+                        //Enter data using BufferReader
+                        BufferedReader reader20 = new BufferedReader(new InputStreamReader(System.in));
+                        // Reading data using readLine
+                        String mission = reader20.readLine();
+                        for (int i = 0; i < listOfFiles.length; i++) {
+                            if (listOfFiles[i].getName().equals(mission)) {
+                                found = true;
+                                System.out.println("Achou ");
+
+                            }
+                        }
+                        if (found){
+                            readRuns();
+                        }else {
+                            System.out.println("Por favor indique uma simulação valida ");
+                            break;
                         }
                         break;
                     case 5:
@@ -150,6 +171,23 @@ public class RunSimulator {
                         break;
                 }
             }
+        }
+    }
+
+    private void readRuns() {
+
+        //JSONArray jsons = new JSONArray();
+
+        Iterator i = jsons.iterator();
+        while (i.hasNext()) {
+            JSONObject jsonObject = (JSONObject) i.next();
+            String mission = (String) jsonObject.get("Mission");
+            Double hp = (Double) jsonObject.get("Hp");
+            System.out.println(mission + "Hp " + hp);
+        }
+        Iterator it = pathArray.iterator();
+        while (it.hasNext()) {
+            System.out.println(it.next());
         }
     }
 
@@ -327,7 +365,8 @@ public class RunSimulator {
         jsons.add(jsonObject);
         counter++;
         try {
-            writeFile = new FileWriter("simulation"+ counter + ".json");
+            String fileName = new SimpleDateFormat("yyyyMMddHHmm").format(new Date());
+            writeFile = new FileWriter("CompletedMissions\\simulation"+ map.getCode()+"Date_"+ fileName+ ".json");
             writeFile.write(jsonObject.toJSONString());
             writeFile.write(pathArray.toJSONString());
             writeFile.close();

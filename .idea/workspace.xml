@@ -4,11 +4,6 @@
     <list default="true" id="dc70bcee-ffe2-46dd-971c-0c624b952891" name="Default Changelist" comment="&quot;Pisco added2&quot;">
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GraphProject.iml" beforeDir="false" afterPath="$PROJECT_DIR$/GraphProject.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/GraphProject/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/GraphProject/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/GraphProject/GraphProject.iml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/GraphProject/GraphProject.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/GraphProject/src/Graph/DiGraphTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/GraphProject/src/Simulator/RunSimulator.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/GraphProject/src/Simulator/RunSimulator.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Graph/DGraph.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Graph/DGraph.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Simulator/RunSimulator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Simulator/RunSimulator.java" afterDir="false" />
     </list>
@@ -197,7 +192,7 @@
       <workItem from="1611928744531" duration="24679000" />
       <workItem from="1612017158236" duration="22000" />
       <workItem from="1612017247645" duration="10938000" />
-      <workItem from="1612793245533" duration="1322000" />
+      <workItem from="1612793245533" duration="4416000" />
     </task>
     <task id="LOCAL-00001" summary="&quot;Pisco added&quot;">
       <created>1612118349828</created>

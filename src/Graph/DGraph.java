@@ -9,7 +9,7 @@ import src.Queue.PriorityQueue;
 
 import java.util.Iterator;
 
-public class DGraph<T> implements  GraphADT<T>
+public class DGraph<T extends Comparable<T>> implements  GraphADT<T>
 {
 	private LinkedList<Vertex> vertices;
 	private LinkedList<Edge> edges;
@@ -73,7 +73,7 @@ public class DGraph<T> implements  GraphADT<T>
 	{
 		for (Vertex<T> each : vertices)
 		{
-			if (each.value.equals(v) == true)
+			if (each.value.compareTo(v)==0)
 				return each;
 		}
 		return null;
