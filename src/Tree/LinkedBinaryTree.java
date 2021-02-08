@@ -6,15 +6,19 @@ import src.Node.BinaryTreeNode;
 
 import java.util.Iterator;
 
+/**
+ * Classe de arvore binaria
+ * @param <T>
+ */
 public class LinkedBinaryTree<T> implements BinaryTreeADT<T>
 {
 
     protected int count;
     protected BinaryTreeNode<T> root;
 
-    //================================================================
-    //  Creates an empty binary tree.
-    //================================================================
+    /**
+     * Creates an empty binary tree.
+     */
     public LinkedBinaryTree()
     {
         count = 0;
@@ -24,6 +28,11 @@ public class LinkedBinaryTree<T> implements BinaryTreeADT<T>
     //================================================================
     //  Creates a binary tree with the specified element as its root.
     //================================================================
+
+    /**
+     * Creates a binary tree with the specified element as its root.
+     * @param element
+     */
     public LinkedBinaryTree (T element)
     {
         count = 1;
@@ -33,6 +42,13 @@ public class LinkedBinaryTree<T> implements BinaryTreeADT<T>
     //================================================================
     //  Constructs a binary tree from the two specified binary trees.
     //================================================================
+
+    /**
+     * Constructs a binary tree from the two specified binary trees.
+     * @param element
+     * @param leftSubtree
+     * @param rightSubtree
+     */
     public LinkedBinaryTree (T element, LinkedBinaryTree<T> leftSubtree,
                              LinkedBinaryTree<T> rightSubtree)
     {
@@ -59,6 +75,10 @@ public class LinkedBinaryTree<T> implements BinaryTreeADT<T>
     //================================================================
     //  Removes the left subtree of this binary tree.
     //================================================================
+
+    /**
+     * Removes the left subtree of this binary tree.
+     */
     public void removeLeftSubtree()
     {
         if (root.getLeft() != null)
