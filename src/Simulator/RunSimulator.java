@@ -2,6 +2,8 @@ package src.Simulator;
 
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
+import org.json.simple.parser.JSONParser;
+import org.json.simple.parser.ParseException;
 import src.Graph.DGraph;
 import src.Graph.Edge;
 import src.Graph.Vertex;
@@ -32,16 +34,16 @@ public class RunSimulator {
     public static final String ANSI_WHITE = "\u001B[37m";
     JSONArray jsons = new JSONArray();
     JSONArray pathArray = new JSONArray();
-    private int counter = 1;
 
 
-    public RunSimulator(DGraph graph, Map map) throws IOException {
+
+    public RunSimulator(DGraph graph, Map map) throws IOException, ParseException {
         this.graph = graph;
         this.map = map;
         startSimulator();
     }
 
-    public void startSimulator() throws IOException {
+    public void startSimulator() throws IOException, ParseException {
         if (this.graph != null && this.map != null) {
             while (true) {
                 System.out.println(ANSI_RED + "Bem vindo ao simulador 3000 de ataque NCIS");
@@ -109,7 +111,6 @@ public class RunSimulator {
                         break;
                     case 4:
 
-
                         //ler nome dos ficheiros da pasta CompletedMissions
                         File folder = new File("CompletedMissions\\");
                         File[] listOfFiles = folder.listFiles();
@@ -117,28 +118,23 @@ public class RunSimulator {
                         for (int i = 0; i < listOfFiles.length; i++) {
                             if (listOfFiles[i].isFile()) {
                                 System.out.println("File " + listOfFiles[i].getName());
+
                             } else if (listOfFiles[i].isDirectory()) {
                                 System.out.println("Directory " + listOfFiles[i].getName());
                             }
                         }
-                        boolean found =false;
+
                         System.out.println("Por favor indique a simulação que deseja ver ");
                         //Enter data using BufferReader
                         BufferedReader reader20 = new BufferedReader(new InputStreamReader(System.in));
                         // Reading data using readLine
                         String mission = reader20.readLine();
+                        //Run the array of files
                         for (int i = 0; i < listOfFiles.length; i++) {
+                            //If find the file call the function readRuns
                             if (listOfFiles[i].getName().equals(mission)) {
-                                found = true;
-                                System.out.println("Achou ");
-
+                                readRuns(mission);
                             }
-                        }
-                        if (found){
-                            readRuns();
-                        }else {
-                            System.out.println("Por favor indique uma simulação valida ");
-                            break;
                         }
                         break;
                     case 5:
@@ -174,21 +170,22 @@ public class RunSimulator {
         }
     }
 
-    private void readRuns() {
+    private void readRuns(String file) throws IOException, ParseException {
+        JSONParser parser = new JSONParser();
+        String location = "CompletedMissions/" + file;
+        Object obj = parser.parse(new FileReader(location));
+        JSONObject jsonObject = (JSONObject) obj;
 
-        //JSONArray jsons = new JSONArray();
-
-        Iterator i = jsons.iterator();
-        while (i.hasNext()) {
-            JSONObject jsonObject = (JSONObject) i.next();
             String mission = (String) jsonObject.get("Mission");
+            System.out.println("Mission " + mission);
             Double hp = (Double) jsonObject.get("Hp");
-            System.out.println(mission + "Hp " + hp);
-        }
-        Iterator it = pathArray.iterator();
-        while (it.hasNext()) {
-            System.out.println(it.next());
-        }
+            System.out.println("Hp " + hp);
+            System.out.println("Caminho percorrido: ");
+            JSONArray caminho = (JSONArray) jsonObject.get("Caminho");
+            Iterator it = caminho.iterator();
+            while (it.hasNext()){
+                System.out.println(it.next());
+            }
     }
 
     public void automaticEdge() throws IOException {
@@ -361,14 +358,13 @@ public class RunSimulator {
         while (it.hasNext()) {
             pathArray.add(it.next());
         }
+        jsonObject.put("Caminho" , pathArray);
 
         jsons.add(jsonObject);
-        counter++;
         try {
             String fileName = new SimpleDateFormat("yyyyMMddHHmm").format(new Date());
             writeFile = new FileWriter("CompletedMissions\\simulation"+ map.getCode()+"Date_"+ fileName+ ".json");
             writeFile.write(jsonObject.toJSONString());
-            writeFile.write(pathArray.toJSONString());
             writeFile.close();
         } catch (IOException e) {
             e.printStackTrace();
