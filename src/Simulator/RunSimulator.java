@@ -7,7 +7,6 @@ import src.Graph.Edge;
 import src.Graph.Vertex;
 import src.Listl.LinkedList;
 
-import javax.sound.midi.Soundbank;
 import java.io.BufferedReader;
 import java.io.FileWriter;
 import java.io.IOException;
@@ -53,6 +52,7 @@ public class RunSimulator {
                 System.out.println(ANSI_YELLOW + "4- Ver testes manuais da missão");
                 System.out.println("5- ver o mapa por ordem de filhos");
                 System.out.println("6- Ver o mapa por ordem de profundidade" + ANSI_RESET);
+                System.out.println("7- Sair");
                 System.out.println(ANSI_RESET);
 
                 //Enter data using BufferReader
@@ -144,6 +144,8 @@ public class RunSimulator {
                             System.out.println(v.getValue());
                         }
                         break;
+                    case 7:
+                        return;
                     default:
                         break;
                 }

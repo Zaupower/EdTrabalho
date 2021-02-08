@@ -2,18 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="dc70bcee-ffe2-46dd-971c-0c624b952891" name="Default Changelist" comment="&quot;Pisco added2&quot;">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GraphProject.iml" beforeDir="false" afterPath="$PROJECT_DIR$/GraphProject.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/GraphProject/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/GraphProject/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/GraphProject/src/Graph/DiGraphTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/GraphProject/src/Graph/DiGraphTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/GraphProject/src/Simulator/EnemyRoomHandler.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/GraphProject/GraphProject.iml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/GraphProject/GraphProject.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/GraphProject/src/Graph/DiGraphTest.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/GraphProject/src/Simulator/RunSimulator.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/GraphProject/src/Simulator/RunSimulator.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/GraphProject/src/Simulator/SimulatorTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/GraphProject/src/Simulator/SimulatorTest.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Graph/DGraph.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Graph/DGraph.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Graph/DiGraphTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Simulator/EnemyRoomHandler.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Simulator/RunSimulator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Simulator/RunSimulator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Simulator/SimulatorTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Simulator/SimulatorTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/DGraphTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/tests/DGraphTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,7 +51,7 @@
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit5" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5" value="src.Graph.DGraph" />
     <property name="create.test.in.the.same.root" value="true" />
-    <property name="last_opened_file_path" value="$USER_HOME$/OneDrive/Ambiente de Trabalho/Jars/json-simple-1.1.jar" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Downloads/json-simple-1.1.jar" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -84,17 +81,6 @@
     </key>
   </component>
   <component name="RunManager" selected="Application.SimulatorTest">
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="SimulatorTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="src.Simulator.SimulatorTest" />
       <module name="GraphProject" />
@@ -104,6 +90,19 @@
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -198,6 +197,7 @@
       <workItem from="1611928744531" duration="24679000" />
       <workItem from="1612017158236" duration="22000" />
       <workItem from="1612017247645" duration="10938000" />
+      <workItem from="1612793245533" duration="1322000" />
     </task>
     <task id="LOCAL-00001" summary="&quot;Pisco added&quot;">
       <created>1612118349828</created>
