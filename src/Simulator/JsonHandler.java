@@ -9,6 +9,7 @@ import src.Listl.LinkedList;
 
 import java.io.FileReader;
 import java.io.IOException;
+import java.nio.file.NoSuchFileException;
 import java.util.Iterator;
 
 
@@ -27,11 +28,12 @@ public class JsonHandler {
     private LinkedList<Room> entradasSaida = new LinkedList<>();
 
     JSONParser parser = new JSONParser();
-    String location = "src/map.json";
+    //String location = "src/map.json";
+    String location = null;
 
-    public void handleJson() throws IOException, ParseException {
 
-
+    public boolean isMapLoaded() {
+        return mapLoaded;
     }
 
     /**
@@ -57,36 +59,41 @@ public class JsonHandler {
 
 
 
-    public JsonHandler() throws IOException, ParseException {
+    public JsonHandler(String location) throws IOException, ParseException {
+        this.location = location;
         //Read complete file
-        Object obj = parser.parse(new FileReader(location));
-        JSONObject jsonObject = (JSONObject) obj;
+        try{
+            Object obj = parser.parse(new FileReader(location));
+            JSONObject jsonObject = (JSONObject) obj;
 
-        //Read Mission Code
-        this.cod = (String) jsonObject.get("cod-missao");
-        //System.out.println(cod);
+            //Read Mission Code
+            this.cod = (String) jsonObject.get("cod-missao");
+            //System.out.println(cod);
 
-        //Read Mission Version
-        this.version = Math.toIntExact((long) jsonObject.get("versao"));
-        //System.out.println(version);
+            //Read Mission Version
+            this.version = Math.toIntExact((long) jsonObject.get("versao"));
+            //System.out.println(version);
 
-        //Read All Mission Rooms
-        this.Edificio = (JSONArray) jsonObject.get("edificio");
-        //System.out.println(Edificio.get(0));
+            //Read All Mission Rooms
+            this.Edificio = (JSONArray) jsonObject.get("edificio");
+            //System.out.println(Edificio.get(0));
 
-        //Read all Room Edges
-        this.Ligacoes = (JSONArray) jsonObject.get("ligacoes");
-        //System.out.println(Ligacoes.get(0));
+            //Read all Room Edges
+            this.Ligacoes = (JSONArray) jsonObject.get("ligacoes");
+            //System.out.println(Ligacoes.get(0));
 
-        EntradasSaidas = (JSONArray) jsonObject.get("entradas-saidas");
-        //System.out.println(EntradasSaidas.get(0));
+            EntradasSaidas = (JSONArray) jsonObject.get("entradas-saidas");
+            //System.out.println(EntradasSaidas.get(0));
 
-        Alvo = (JSONObject) jsonObject.get("alvo");
-        //System.out.println(Alvo.get("divisao") +" "+ Alvo.get("tipo"));
+            Alvo = (JSONObject) jsonObject.get("alvo");
+            //System.out.println(Alvo.get("divisao") +" "+ Alvo.get("tipo"));
 
-        //Read All Mission Enemys
-        this.Inimigos = (JSONArray) jsonObject.get("inimigos");
-        mapLoaded = true;
+            //Read All Mission Enemys
+            this.Inimigos = (JSONArray) jsonObject.get("inimigos");
+            mapLoaded = true;
+        }catch (ParseException e){
+            System.out.println(e);
+        }
     }
 
     public LinkedList<Room> getEntradasSaida(){

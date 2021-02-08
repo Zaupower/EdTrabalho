@@ -7,11 +7,12 @@ import org.json.simple.parser.ParseException;
 import src.Graph.DGraph;
 import src.Graph.Edge;
 import src.Graph.Vertex;
+import src.Listl.ArrayUnorderedList;
 import src.Listl.LinkedList;
 
 import java.io.*;
+import java.nio.file.NoSuchFileException;
 import java.text.SimpleDateFormat;
-import java.time.LocalTime;
 import java.util.Date;
 import java.util.Iterator;
 
@@ -34,27 +35,36 @@ public class RunSimulator {
     public static final String ANSI_WHITE = "\u001B[37m";
     JSONArray jsons = new JSONArray();
     JSONArray pathArray = new JSONArray();
+    boolean segundoMapa = false;
 
 
+    /**
+     * CLass que corre o menu
+     *
+     * @throws IOException
+     * @throws ParseException
+     */
+    public RunSimulator() throws IOException, ParseException {
 
-    public RunSimulator(DGraph graph, Map map) throws IOException, ParseException {
-        this.graph = graph;
-        this.map = map;
         startSimulator();
     }
 
     public void startSimulator() throws IOException, ParseException {
-        if (this.graph != null && this.map != null) {
             while (true) {
-                System.out.println(ANSI_RED + "Bem vindo ao simulador 3000 de ataque NCIS");
+                System.out.println(ANSI_RED + "Bem vindo ao simulador 3000 de ataque NCIS"+ ANSI_RESET);
+                if (!segundoMapa){
+                    choseMap();
+                }
                 System.out.println(ANSI_YELLOW + "Escolha uma opcao: ");
                 System.out.println(ANSI_CYAN + "1- Percorrer mapa manualmente");
                 System.out.println(ANSI_PURPLE + "2- Percorrer mapa automaticamente para da entrada escolhida");
                 System.out.println(ANSI_BLUE + "3- Percorrer mapa automaticamente para descobrir qual a melhor rota");
                 System.out.println(ANSI_YELLOW + "4- Ver testes manuais da missão");
+
                 System.out.println("5- ver o mapa por ordem de filhos");
                 System.out.println("6- Ver o mapa por ordem de profundidade" + ANSI_RESET);
-                System.out.println("7- Sair");
+                System.out.println("7- Escolher outro mapa");
+                System.out.println("8- Sair");
                 System.out.println(ANSI_RESET);
 
                 //Enter data using BufferReader
@@ -97,7 +107,6 @@ public class RunSimulator {
                         entrada2 = reader2.readLine();
                         boolean verify2 = verifyEnter(entrada2);
 
-                        //While Enter dont exist(returned false) dont continue and ask another enter
                         while (verify2 == false) {
                             System.out.println("Choose another enter");
                             entrada2 = reader2.readLine();
@@ -162,11 +171,61 @@ public class RunSimulator {
                         }
                         break;
                     case 7:
+                        choseMap();
+                        break;
+                    case 8:
                         return;
                     default:
                         break;
                 }
             }
+
+    }
+
+    private void choseMap() throws IOException, ParseException {
+
+        segundoMapa = true;
+        System.out.println("Por favor escolha o mapa que pretrende carregar");
+
+        File f = new File("Maps\\");
+        File[] listOfFilesMap = f.listFiles();
+
+        for (int i = 0; i < listOfFilesMap.length; i++) {
+            if (listOfFilesMap[i].isFile()) {
+                System.out.println("Map " + listOfFilesMap[i].getName());
+
+            } else if (listOfFilesMap[i].isDirectory()) {
+                System.out.println("Directory " + listOfFilesMap[i].getName());
+            }
+        }
+        BufferedReader readeN = new BufferedReader(new InputStreamReader(System.in));
+        String mapS = readeN.readLine();
+        //Run the array of files
+        String mapPath = "Maps/" + mapS;
+        boolean foundMap = false;
+        for (int i = 0; i < listOfFilesMap.length; i++) {
+            if (listOfFilesMap[i].getName().equals(mapS)) {
+                foundMap = true;
+                //System.out.println("Encontrado");
+            }
+        }
+        if (foundMap) {
+                JsonHandler jsHandler = new JsonHandler(mapPath);
+
+                ArrayUnorderedList<Enemy> enemies = jsHandler.getEnemies();
+                LinkedList<Room> roomList = jsHandler.getRooms();
+                LinkedList<Room> inOutList = jsHandler.getEntradasSaida();
+                LinkedList<Ligacoes> ligacoesLinkedList = jsHandler.getLigacoes();
+                String cod = jsHandler.getCod();
+                String finish = jsHandler.getAlvo();
+                int version = jsHandler.getVersion();
+                DGraph grapht = new DGraph();
+                GraphHandler graphHandler = new GraphHandler();
+                this.map = new Map(cod, version, roomList, ligacoesLinkedList, inOutList, finish);
+                this.graph = graphHandler.fillgraph(grapht, ligacoesLinkedList);
+        }else {
+            System.out.println("Mapa Invalido");
+            choseMap();
         }
     }
 
