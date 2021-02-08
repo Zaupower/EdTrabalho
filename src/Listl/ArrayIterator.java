@@ -19,20 +19,19 @@ public class ArrayIterator<T> implements Iterator<T>
         current = 0;
     }
 
-    //-----------------------------------------------------------------
-    //  Returns true if this iterator has at least one more element
-    //  to deliver in the iteraion.
-    //-----------------------------------------------------------------
+    /**
+     * Method for verify if has next
+     * @return boolean of (current < count)
+     */
     public boolean hasNext()
     {
         return (current < count);
     }
 
-    //-----------------------------------------------------------------
-    //  Returns the next element in the iteration. If there are no
-    //  more elements in this itertion, a NoSuchElementException is
-    //  thrown.
-    //-----------------------------------------------------------------
+    /**
+     * Method for iterate one array
+     * @return items[current - 1]
+     */
     public T next()
     {
         if (! hasNext())
@@ -40,12 +39,8 @@ public class ArrayIterator<T> implements Iterator<T>
 
         current++;
         return items[current - 1];
-
     }
 
-    //-----------------------------------------------------------------
-    //  The remove operation is not supported in this collection.
-    //-----------------------------------------------------------------
     public void remove() throws UnsupportedOperationException
     {
         throw new UnsupportedOperationException();

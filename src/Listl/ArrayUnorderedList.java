@@ -5,25 +5,27 @@ import src.Exceptionsl.ElementNotFoundException;
 
 public class ArrayUnorderedList<T> extends ArrayList<T>
 {
-    //-----------------------------------------------------------------
-    //  Creates an empty list using the default capacity.
-    //-----------------------------------------------------------------
+    /**
+     * Creates an empty list using the default capacity.
+     */
     public ArrayUnorderedList()
     {
         super();
     }
 
-    //-----------------------------------------------------------------
-    //  Creates an empty list using the specified capacity.
-    //-----------------------------------------------------------------
+    /**
+     * Creates an empty list using the specified capacity.
+     * @param initialCapacity
+     */
     public ArrayUnorderedList(int initialCapacity)
     {
         super(initialCapacity);
     }
 
-    //-----------------------------------------------------------------
-    //  Adds the specified element to the front of the list.
-    //-----------------------------------------------------------------
+    /**
+     * Adds the specified element to the front of the list.
+     * @param element
+     */
     public void addToFront (T element)
     {
         if (size() == list.length)
@@ -41,9 +43,11 @@ public class ArrayUnorderedList<T> extends ArrayList<T>
 
         return super.getByIndex(index);
     }
-    //-----------------------------------------------------------------
-    //  Adds the specified element to the rear of the list.
-    //-----------------------------------------------------------------
+
+    /**
+     * Adds the specified element to the rear of the list.
+     * @param element
+     */
     public void addToRear (T element)
     {
         if (size() == list.length)
@@ -53,10 +57,12 @@ public class ArrayUnorderedList<T> extends ArrayList<T>
         rear++;
     }
 
-    //-----------------------------------------------------------------
-    //  Adds the specified element after the specified target element.
-    //  Throws a ElementNotFoundException if the target is not found.
-    //-----------------------------------------------------------------
+    /**
+     * Adds the specified element after the specified target element.
+     * Throws a ElementNotFoundException if the target is not found.
+     * @param element
+     * @param target
+     */
     public void addAfter (T element, T target)
     {
         if (size() == list.length)

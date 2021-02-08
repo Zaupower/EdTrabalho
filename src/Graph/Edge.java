@@ -19,9 +19,18 @@ public class Edge {
         to.addIncoming(from);
     }
 
+    /**
+     * Method for return the cost of one edge
+     * @return cost
+     */
     public double getCost(){
         return this.cost;
     }
+
+    /**
+     * Method to print the info of edge
+     * @return
+     */
     @Override
     public String toString() {
         return "src.Graph.Edge{" +
